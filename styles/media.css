@@ -1,0 +1,86 @@
+@media(max-width:1200px){
+    nav.navbar{
+        ul.navbar-nav{
+            .nav-item{
+                ul.dropdown-menu{
+                    li{
+                        ul{
+                            width: 200px;
+                            left: -195px !important;
+                           }
+                     }
+                }
+            }
+        }
+    }
+}
+@media(max-width:997px){
+    nav.navbar{
+       position: fixed;
+        ul.navbar-nav{
+            position: absolute;
+            top: 30%;
+            left: 2%;
+            right: 2%;
+            height: 100vh;
+            padding: 2rem;
+            z-index: 10;
+            background-color: #fff;
+            .nav-item{
+                .nav-link{
+                    position: relative;
+                    color:#333;
+                    font-weight: 600;
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        left: 0px;
+                        bottom: 0;
+                        right: 0;
+                        height: 0px;
+                        }
+                        &:hover{
+                            color: var(--main-color) !important;
+                        }
+                   }
+                .active{
+                    color: var(--main-color);
+                    &::after{
+                        right: 0%;
+                    }
+                }
+                &:hover{
+                    .nav-link::after{
+                        right: 0%;
+                    }
+                }
+                ul.dropdown-menu{
+                    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25) !important;
+                    li{
+                        .dropdown-item{
+                            &:hover{
+                                background-color: transparent;
+                                color: var(--main-color) !important;
+                            }
+                        }
+                        ul{
+                            position: static !important;
+                            box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25) !important;
+                            width: 500px !important;
+                            margin-left: 30px;
+                            display: none;
+                           }
+                        &:hover{
+                            ul{
+                                display: block
+                            }
+                        }
+                     }
+                }
+            }
+            a.cross{
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
