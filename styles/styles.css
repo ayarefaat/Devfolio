@@ -54,6 +54,9 @@ nav.navbar{
         }
     }
     ul.navbar-nav{
+        a.cross{
+            visibility: hidden !important;
+        }
         .nav-item{
             .nav-link{
                 position: relative;
